@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginmenu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400&family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+        }
+
+        body {
+            background-color: rgb(73, 73, 77);
+            width: 100%;
+            height: 880px;
+           
+        }
+
+        .box {
+            display: inline-block;
+            margin-top: 200px;
+            background-color: transparent;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 400px;
+            height: 500px;
+            border-radius: 40px;
+            border: 2px solid #fff;
+            backdrop-filter: blur(3px);
+        }
+
+
+        h2 {
+            position: absolute;
+            top: 30px;
+            font-size: 2em;
+            
+        }
+
+        .inputarea {
+            width: 310px;
+            height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 2px solid white;
+        }
+        .inputarea input {
+            background: transparent;
+            border: none;
+            height: 50px;
+            width: 272px;
+            outline: 0;
+
+        }
+
+
+
+
+        #email {
+            position: absolute;
+            top: 120px;
+        }
+
+        #password {
+            position: absolute;
+            top: 220px;
+        }
+
+        .stuff {
+            position: absolute;
+            bottom: 80px;
+            
+        }
+
+        .stuff a {
+            text-decoration: none;
+        }
+        .stuff a:hover {
+            text-decoration: underline;
+        }
+   
+
+        .register {
+            position: absolute;
+            bottom: 20px;
+        }
+        .register a {
+            text-decoration: none;
+        }
+
+        .register a:hover {
+            text-decoration: underline;
+        }
+
+        .inputarea label {
+            position: absolute;
+            left: 3px;
+        }
+
+        .inputarea input {
+            padding-left: 4px;
+        }
+
+        #email label {
+            position: absolute;
+            top: 15px;
+        }
+
+        #password label {
+            position: absolute;
+            top: 15px;
+        }
+
+        #checkbox {
+            width: 14px;
+            height: 12px;
+        }
+
+        .button input{
+            background: #fff;
+            width: 310px;
+            height: 50px;
+            color: black;
+            font-size: larger;
+            position: absolute;
+            top: 320px;
+            left: 45px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            transition: 0.15s;
+        }
+        .button:hover {
+            background: #d1cece;
+        }
+        .button:active {
+            background: #7e7d7d;
+        }
+
+        .fa-envelope {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 15px;
+            right: 4px;
+        }
+        .fa-lock {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 15px;
+            right: 4px;
+        
+
+        }
+        .fa-lock:hover {
+            cursor: pointer;
+        }
+        .fa-envelope:hover{
+            cursor: pointer;
+
+        }
+
+        .fa-right-to-bracket {
+            color: black;
+        }
+        .bar {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 50px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        .bar:hover {
+            cursor: pointer;
+        }
+        .circle {
+            transition: 0.6s;
+            margin-left: 0px;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background-color: black;
+        }
+        .circle:hover{
+            cursor: pointer;
+        }
+        #off {
+            margin-top: 0px;
+            margin-left: 20px;
+            font-size: 1.4em;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="box" id="box">
+        <h2>Login</h2>
+        <form action=""method="post" id="loginForm">
+            <div class="inputarea" id="email" onclick="labelfunc()">
+                <i class="fa-solid fa-envelope" onclick="labelfunc()"></i>
+                <input type="email"name="email">
+                <label for="" id="label1">Email</label>
+            </div>
+            <div class="inputarea" id="password" onclick="labelfunc2()">
+                <i class="fa-solid fa-lock" onclick="labelfunc2()"></i>
+                <input type="password" name="password">
+                <label for="" id="label2">Password</label>
+            </div>
+            <div class="button">
+                <input type="submit"value="Login">
+            </div>
+            <div class="stuff">
+                <label for="checkbox"></label>
+                <a href="#"><strong></strong> </a>
+            </div>
+            <div class="register">
+                Don't have an account ? <a href="/register"><strong>Register</strong></a>.
+            </div>
+        </form>
+    </div>
+    <div class="footer" style="background-color: red;">
+        <a href="https://github.com/CaganDerbent"><i className="fa-brands fa-github fa-2xl" style="color: whitesmoke;"></i></a>
+        <a href="https://www.linkedin.com/in/cagan-derbent-61536727a/"><i className="fa-brands fa-linkedin fa-2xl" style="color: whitesmoke;"></i></a>
+    </div>
+    <div id="errorContainer"></div>
+
+    <script>
+        var element = document.getElementById("label1");
+        var element2 = document.getElementById("label2");
+
+        function labelfunc(){
+            element.style.top = "-5px";
+            element.style.transitionDuration = "0.4s"
+            
+        }
+        function labelfunc2(){
+            element2.style.top = "-5px";
+            element2.style.transitionDuration = "0.4s"
+        }
+
+        
+  
+
+        
+    
+
+
+
+    </script>
+
+
+</body>
+</html>
